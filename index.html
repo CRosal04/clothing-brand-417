@@ -2,7 +2,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
 <header>
-  <h1>The M Shop</h1>
+    <a class="skip-link" href='#main'>Skip to content</a>
+    <a href="index.html" id="logo"><img src="images/logo.jpg" alt="The 
+        R logo representign the brand"></a>
+  <h1>La R Shop</h1>
 </header>
 <nav>
   <h2>Main Navigation</h2>
@@ -14,26 +17,53 @@
 
   </ul>
 </nav>
-<main>
- <section id="graffitiGirl">
-    <h2>Graffiti Girl</h2>
-    <p>Noteable works by graffiti girl include monster mash, hula hoop, and slimer. You may see her work pop in your urban spaces. </p>
-    <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">
+<main id = "main" >
+ <section id="aBout">
+    <h2>About</h2>
+<p>La R Shop is a vibrant clothing brand that beautifully intertwines contemporary fashion with the rich heritage of Mexican culture. Inspired by the colorful traditions, intricate craftsmanship, and unique artistry found throughout Mexico, La R Shop aims to create apparel that not only stands out but also tells a story.</p>
+    
+    <h3>Vision</h3>
+    <p>At La R Shop, we envision a world where everyone can showcase their individuality through their wardrobe. We draw inspiration from diverse cultures, art, and the latest fashion trends, blending them into unique pieces that are both timeless and modern. Our collections reflect a commitment to creativity, originality, and self-expression.</p>
+    <!---<img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">--->
   </section>
-  <section id="monsterMash">
-    <h3>Monster Mash</h3>
+  <section id="sHop">
+    <h2>Shop</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">
+   
+   <!--- <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">-->
   </section>
-    <section id="hulaHoop">
-    <h3>Hula Hoop</h3>
+    <section id="cOllections">
+    <h2>Collection</h2>
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">
+     <!--- <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">-->
   </section>
-    <section id="slimer">
-    <h3>Slimer</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">
+    <section id="Contact-us">
+        <h2>Contact us</h2>
+        <form>
+            <label for="name">First name</label>
+            <input id="name" type="text" autocomplete="name" placeholder="Enter First name">
+            <label for="lname">Last name</label>
+            <input id="lname" type="text" autocomplete="name" placeholder="Enter Last name">
+            <fieldset>
+                <legend> Preffered Contact Method</legend>
+                <input id="Phone" type ="radio" name="contact" value="Phone" >
+                <label for="Phone">Phone</label>
+                <input id="Email" type ="radio" name="contact" value="Email">
+                <label for="email">Email</label>
+                <input id="text" type ="radio" name="contact" value="text">
+                <label for="text">Text</label>
+            </fieldset>
+                <label for ="email">Email</label>	
+                <input id="email" type="email" autocomplete= "email" placeholder="Enter Email">
+                <label for ="phonenum"> Phone</label>	
+                <input id="phonenum" type="tel" autocomplete ="tel"  placeholder="Enter telephone number">
+                <label for ="message">Your message :</label>
+                <textarea>  </textarea>
+               
+                    
+        </select>
+        
+        </form>
   </section>
 </main>
 <footer>
