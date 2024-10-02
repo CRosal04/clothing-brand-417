@@ -160,6 +160,8 @@ padding: 10px 8px;
 }
 #aBout{
 	background-color:#c29470;
+  display: grid;
+  grid-template-columns: repeat(2, 4fr);
  }
  #aBout img {
   width: 200px;
