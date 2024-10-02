@@ -116,9 +116,8 @@ h3{
 header{
     background-image: linear-gradient(green, #FFFFFF);
 }
-#aBout{
-	background-color:#544013;
- }
+
+
 
  /*Nav*/
  nav{
@@ -159,12 +158,20 @@ nav li:hover{
 background-color:#F6D64A ;
 padding: 10px 8px;
 }
+#aBout{
+	background-color:#c29470;
+ }
+
+
 /*collection*/
+#cOllections{
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
 .product-display {
   margin-top: 20px;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ddd;
+  
   border-radius: 5px;
 }
 .product-display img {
@@ -199,6 +206,7 @@ padding: 10px 8px;
 /* shop*/
 #sHop{
   margin: 0 auto ;
+  background-color: #80b9c8
 }
 #product {
   display: inline-block;
