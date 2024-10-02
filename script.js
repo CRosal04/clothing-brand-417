@@ -2,22 +2,20 @@
 
         const toggleBtn = document.getElementById('toggle-btn');
         const body = document.body;
-
-        // Check if the user already has a preferred mode from localStorage
         const currentMode = localStorage.getItem('theme');
         if (currentMode === 'dark') {
             body.classList.add('dark-mode');
             toggleBtn.textContent = 'Switch to Light Mode';
         }
 
-        // Add an event listener to the button to toggle the dark mode
+     
         toggleBtn.addEventListener('click', function () {
             body.classList.toggle('dark-mode');
 
             // Update the button text
             if (body.classList.contains('dark-mode')) {
                 toggleBtn.textContent = 'Switch to Light Mode';
-                // Save the user preference to localStorage
+                
                 localStorage.setItem('theme', 'dark');
             } else {
                 toggleBtn.textContent = 'Switch to Dark Mode';
