@@ -2,15 +2,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 <link href="style.css" rel="stylesheet">
+<script src="script.js" defer></script>
 <header>
     <a class="skip-link" href='#main'>Skip to content</a>
-    <a href="index.html" id="logo"><img src="images/logo.jpg" alt="The R logo representign the brand"></a>
+    <!--<a href="index.html" id="logo"><img src="images/logo.jpg" width="120" 
+      height="80" alt="The R logo representign the brand"></a>-->
   <h1>La R Shop</h1>
-</header>
+  <button class="toggle-btn" id="toggle-btn">Switch to Dark Mode</button>
 <nav>
   <h2 class="sr-only">Main Content</h2>
-  <input name="toggle" id="toggle" type="checkbox">
-   <label for="toggle">Menu</label>
+  
   <ul>
     <li><a href="#aBout">About</a></li>
     <li><a href="#sHop">Shop</a></li>
@@ -19,6 +20,7 @@
 
   </ul>
 </nav>
+</header>
 <main id = "main" >
  <section id="aBout">
     <h2>About</h2>
@@ -26,28 +28,68 @@
     
     <h3>Vision</h3>
     <p>At La R Shop, we envision a world where everyone can showcase their individuality through their wardrobe. We draw inspiration from diverse cultures, art, and the latest fashion trends, blending them into unique pieces that are both timeless and modern. Our collections reflect a commitment to creativity, originality, and self-expression.</p>
-    <!---<img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">--->
+    
   </section>
   <section id="sHop">
     <h2>Shop</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-   
-   <!--- <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">-->
+    <h3>Quick Order</h3>
+    <section id="product"> 
+        <img src="https://via.placeholder.com/150" alt="Product 1">
+        <p>Product 1 - $20.00</p>
+        <button onclick="addToCart(20)">Add to Cart</button>
+    </section>
+    <section id="product"> 
+      <img src="https://via.placeholder.com/150" alt="Product 1">
+      <p>Product 1 - $25.00</p>
+      <button onclick="addToCart(25)">Add to Cart</button>
+  </section>
+  <section id="product"> 
+    <img src="https://via.placeholder.com/150" alt="Product 1">
+    <p>Product 1 - $25.00</p>
+    <button onclick="addToCart(25)">Add to Cart</button>
+</section>
+<div id="cart">
+  <h2>Your Cart</h2>
+  <div class="cart-details">
+      <p>Product Total: $<span id="productTotal">0.00</span></p>
+      <p>Tax (10%): $<span id="taxAmount">0.00</span></p>
+      <p>Shipping: $<span id="shippingAmount">10.00</span></p>
+      <p><strong>Total Price (with tax): $<span id="totalPrice">0.00</span></strong></p>
+  </div>
+  <button id="checkout-btn" onclick="checkout()">Checkout</button>
+  <div id="message"></div>
+</div>
+  
   </section>
     <section id="cOllections">
     <h2>Collection</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-     <!--- <img src="https://images.unsplash.com/photo-1581850518616-bcb8077a2336?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0MjA0MTE0NQ&ixlib=rb-1.2.1&q=85" alt="graffiti art with bright colored monsters">-->
+ <!-- Product Display Area -->
+ <div id="product-display" class="product-display">
+  <img id="product-image" src="https://via.placeholder.com/250" alt="Default Product">
+  <h2 id="product-name">Default Product</h2>
+  <p id="product-description">This is the default product description. Choose a product to view its details.</p>
+</div>
+
+<!-- Buttons to Select Products -->
+<div class="product-buttons">
+  <button onclick="showProduct('Product 1', 'https://via.placeholder.com/250/FF5733', 'Product 1 is a high-quality item designed to meet your needs.')">Product 1</button>
+  <button onclick="showProduct('Product 2', 'https://via.placeholder.com/250/33FF57', 'Product 2 offers advanced features and great durability for long-term use.')">Product 2</button>
+  <button onclick="showProduct('Product 3', 'https://via.placeholder.com/250/3357FF', 'Product 3 combines sleek design with powerful performance for maximum satisfaction.')">Product 3</button>
+</div>
+</div>
   </section>
     <section id="Contact-us">
         <h2>Contact us</h2>
         <form>
+          <div id="names">
             <label for="name">First name: <span class="required">*</span></label>
             <input id="name" type="text" autocomplete="name" placeholder="Enter First name">
             <label for="lname">Last name:<span class="required">*</span></label>
             <input id="lname" type="text" autocomplete="name" placeholder="Enter Last name">
+          </div>
+          <div id="nums">
             <fieldset>
-              <legend>Preffered Contact Method<span class="required">*</span></legend>
+              <legend>Preferred Contact Method<span class="required">*</span></legend>
                 <input id="Phone" type ="radio" name="contact" value="Phone" >
                 <label for="Phone">Phone</label>
                 <input id="Email" type ="radio" name="contact" value="Email">
@@ -61,10 +103,12 @@
                 <input id="phonenum" type="tel" autocomplete ="tel"  placeholder="Enter telephone number">
                 <label for ="message">Your message :<span class="required">*</span></label>
                 <textarea>  </textarea>
+          </div>
                
                     
-        </select>
-        
+    
+        <input type="submit" name="mySubmit" id="mySubmit" value="Submit">
+                      
         </form>
   </section>
 </main>

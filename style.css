@@ -1,9 +1,7 @@
 html{
     margin: 0 auto;
 }
-body{
-    margin: 0 auto;
-}
+
 
 
 .nunito {
@@ -43,8 +41,36 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+:root {
+  --background-color: white;
+  --text-color: black;
+}
 body {
 	line-height: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  align-items: center;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+.toggle-btn {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.toggle-btn:hover {
+  background-color: #45a049;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+  --background-color: #121212;
+  --text-color: #f0f0f0;
 }
 h1{
 	font-family: "Nunito", sans-serif;
@@ -88,7 +114,7 @@ h3{
     overflow: hidden;
 }
 header{
-    background-image: linear-gradient(#4B7C53, #FFFFFF);
+    background-image: linear-gradient(green, #FFFFFF);
 }
 #aBout{
 	background-color:#544013;
@@ -133,6 +159,137 @@ nav li:hover{
 background-color:#F6D64A ;
 padding: 10px 8px;
 }
+/*collection*/
+.product-display {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.product-display img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+}
+.product-display h2 {
+  margin: 15px 0;
+  color: #333;
+}
+.product-display p {
+  font-size: 1.1em;
+  color: #666;
+}
+.product-buttons {
+  margin-top: 20px;
+}
+.product-buttons button {
+  margin: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+.product-buttons button:hover {
+  background-color: #F6D64A;
+}
+
+/* shop*/
+#sHop{
+  margin: 0 auto ;
+}
+#product {
+  display: inline-block;
+  width: 200px;
+  margin: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+#product img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+#product button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+#cart {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.cart-details {
+  margin-bottom: 10px;
+}
+#checkout-btn {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#checkout-btn:hover {
+  background-color: #F6D64A;
+}
+#message {
+  margin-top: 20px;
+  font-size: 1.2em;
+  color: green;
+}
+
+
+
 /*Form*/
+#contact-us{
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
 .required {
     color: red; }
+    
+    #contact-us form{
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+  }
+ fieldset{
+  background-color: #fff;
+  border: 1px solid green;
+ }
+  .radio-input {
+      display: flex;
+      align-items: center;
+      padding-left: 30%;
+      
+      
+  }
+  .radio-label{
+          display: inline-block;
+          margin-right: 55px;
+      }
+
+    
+    /* Submit Button Styles */
+input[type="submit"] {
+  background-color: green; 
+  color: white; 
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+  background-color: #F6D64A ; 
+}
