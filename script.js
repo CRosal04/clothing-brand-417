@@ -34,7 +34,7 @@ function showProduct(name, image, description) {
 
 // Show the default product on page load
 window.onload = function() {
-    showProduct('Blue demon black shirt', 'images/blue demon.webp', 'The design features a luchador wearing a traditional mask, a key symbol of identity and mystique in Mexican wrestling.');
+    showProduct('nopalera shirt', 'images/la nopals2.jpeg', 'Our Loteria-Inspired Shirt is an iconic tribute to a beloved Mexican culture.');
 };
 
 ////Shopping cart
