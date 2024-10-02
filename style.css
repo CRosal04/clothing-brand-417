@@ -1,0 +1,138 @@
+html{
+    margin: 0 auto;
+}
+body{
+    margin: 0 auto;
+}
+
+
+.nunito {
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+}
+.montserrat{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+    html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+h1{
+	font-family: "Nunito", sans-serif;
+    font-size: 3em;
+	font-weight:10em ;
+	text-transform: uppercase;
+}
+ h2 {
+    font-family: "Nunito", sans-serif;
+    font-size: 2em;
+	font-weight:10em ;
+	text-transform: uppercase;
+}
+h3{
+	font-family: "Nunito", sans-serif;
+    font-size: 1.5em;
+	font-weight:10em ;
+	text-transform: uppercase;
+}
+/*skip botton*/
+#skip{
+	position: absolute;
+	left: -10000px;
+	top: auto;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+  }
+   
+  #skip:focus{
+	position: static;
+	width: auto;
+	height: auto;
+  }
+  .sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+header{
+    background-image: linear-gradient(#4B7C53, #FFFFFF);
+}
+#aBout{
+	background-color:#544013;
+ }
+
+ /*Nav*/
+ nav{
+	grid-column: 1 / -1;
+	position: relative;
+	bottom: 60%;
+}
+nav li {
+	
+margin-left: 5px;
+background-color: #FFFFFF;
+padding: 10px 8px;
+  }
+nav a{
+text-decoration:none;
+text-align: center;
+align-items: center;
+padding: 2rem;
+margin: 1rem 0;
+background-color: var(--white);
+color:#000000; 
+font-size: 1rem;
+font-weight: bold;
+border-radius: 0.25rem;
+text-transform: uppercase;
+justify-content: center;
+  }
+nav ul{
+list-style:none;
+display: flex;
+justify-content: center;
+padding: 10px 8px;
+text-align: center;
+}  
+
+
+nav li:hover{
+background-color:#F6D64A ;
+padding: 10px 8px;
+}
+/*Form*/
+.required {
+    color: red; }
