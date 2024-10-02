@@ -34,7 +34,7 @@ function showProduct(name, image, description) {
 
 // Show the default product on page load
 window.onload = function() {
-    showProduct('Default Product', 'https://via.placeholder.com/250', 'This is the default product description. Choose a product to view its details.');
+    showProduct('Blue demon black shirt', 'images/blue demon.webp', 'The design features a luchador wearing a traditional mask, a key symbol of identity and mystique in Mexican wrestling.');
 };
 
 ////Shopping cart
