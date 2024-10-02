@@ -216,12 +216,13 @@ padding: 10px 8px;
 #product {
   display: inline-block;
   width: 200px;
-  margin: 15px;
-  padding: 10px;
+  margin: 35px;
+  padding: 12px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
   text-align: center;
+  
 }
 #product img {
   width: 150px;
