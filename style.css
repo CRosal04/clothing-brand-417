@@ -286,7 +286,11 @@ padding: 10px 8px;
 /*Form*/
 #contact-us{
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1px solid green;
+  display: flex;
+  gap: 20px; 
+  justify-content: space-between; 
+  flex-wrap: wrap; 
 }
 .required {
     color: red; }
@@ -296,22 +300,30 @@ padding: 10px 8px;
       margin: auto;
       text-align: center;
   }
- fieldset{
-  background-color: #fff;
-  border: 1px solid green;
- }
-  .radio-input {
-      display: flex;
-      align-items: center;
-      padding-left: 30%;
-      
-      
+  #names input,#nums input{
+    border: 1px solid green;
+    display: inline-block;
+    margin:5px;
+    padding: 10px;
+    background-color: #ddd;
   }
-  .radio-label{
-          display: inline-block;
-          margin-right: 55px;
-      }
-
+ fieldset{
+  flex: 1;
+  min-width: 250px; 
+  padding: 20px;
+  border: 1px solid green;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+ }   
+    
+      #nums label ,#names label{
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+        padding: 5px;
+    }
     
     /* Submit Button Styles */
 input[type="submit"] {
