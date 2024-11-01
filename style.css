@@ -243,6 +243,9 @@ padding: 10px 8px;
   border: 1px solid #ddd;
 }
 
+#cOllections h2{
+margin:20px;
+}
 .product-display {
   margin-top: 20px;
   padding: 20px;
@@ -291,6 +294,14 @@ padding: 10px 8px;
   gap: 20px; 
   justify-content: space-between; 
   flex-wrap: wrap; 
+
+}
+#contact-us h2{
+  margin: 8px;
+  padding: 10px;
+}
+.nums, .names{
+  padding:30px;
 }
 .required {
     color: red; }
@@ -300,6 +311,9 @@ padding: 10px 8px;
       margin: auto;
       text-align: center;
   }
+  .hidden {
+    display: none;
+}
   #names input,#nums input{
     border: 1px solid green;
     display: inline-block;
@@ -316,13 +330,13 @@ padding: 10px 8px;
   background-color: #f4f4f4;
  }   
     
-      #nums label ,#names label{
-        display: block;
-        margin-bottom: 5px;
-        font-weight: bold;
-        color: #000000;
-        text-transform: uppercase;
-        padding: 5px;
+#nums label ,#names label{
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  padding: 5px;
     }
     
     /* Submit Button Styles */
@@ -335,7 +349,13 @@ input[type="submit"] {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin:30px;
 }
 input[type="submit"]:hover {
-  background-color: #F6D64A ; 
+  background-color: #F6D64A ;
+   
+}
+footer{
+  text-align: center;
+  background-color: #45a049;
 }
