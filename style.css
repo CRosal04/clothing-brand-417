@@ -72,6 +72,17 @@ body.dark-mode {
   --background-color: #121212;
   --text-color: #f0f0f0;
 }
+
+
+.dark-mode #aBout {
+  background-color: #00B2A9;
+}
+.dark-mode #sHOP {
+  background-color: #FFA500; /* Dark mode: Orange */
+}
+.dark-mode #sHop p{
+  color:#D3D3D3;
+}
 h1{
 	font-family: "Nunito", sans-serif;
     font-size: 3em;
