@@ -72,7 +72,7 @@ function clearCart() {
     updateCart();
 }
 
-///Contact-us
+///Contact-us(need help here )
 
 //form messages
 function validateForm(event) {
