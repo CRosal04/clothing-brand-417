@@ -76,7 +76,7 @@ function clearCart() {
 
 //form messages
 function validateForm(event) {
-    event.preventDefault(); // Prevent form submission to validate first
+    event.preventDefault(); 
 
     // Retrieve input elements
     let uName = document.getElementById("name");
@@ -87,7 +87,7 @@ function validateForm(event) {
     let Email = document.getElementById("Email");
     let Text = document.getElementById("text");
 
-    // Container to display the chosen contact method
+
     let contact = document.getElementById("contact");
 
     // Reset visibility for contact output and clear any previous errors
@@ -100,7 +100,6 @@ function validateForm(event) {
     let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
     let phonERegex = /^(1[ -]?)?\d{3}[ -]?\d{3}[ -]?\d{4}$/;
 
-    // Reset error states on inputs
     uName.classList.remove("error");
     Lname.classList.remove("error");
     email.classList.remove("error");
@@ -156,13 +155,12 @@ function validateForm(event) {
         contact.classList.remove("hidden");
         contact.innerHTML = "Please select a preferred contact method";
     }
-
-    // If the form is valid, submit and reset fields
+    
     if (isValid) {
-        alert("Form submitted successfully!"); // For demonstration only
+        alert("Form submitted successfully!"); 
         document.getElementById("newAcct").submit();
 
-        // Clear input fields and reset form
+        
         uName.value = "";
         Lname.value = "";
         email.value = "";
