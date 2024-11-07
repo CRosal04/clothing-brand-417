@@ -78,7 +78,6 @@ function clearCart() {
 function validateForm(event) {
     event.preventDefault(); 
 
-    // Retrieve input elements
     let uName = document.getElementById("name");
     let Lname = document.getElementById("lname");
     let email = document.getElementById("email");
@@ -90,11 +89,9 @@ function validateForm(event) {
 
     let contact = document.getElementById("contact");
 
-    // Reset visibility for contact output and clear any previous errors
     contact.classList.add("hidden");
     contact.innerHTML = "";
 
-    // Regular expressions for validation
     let uNameRegex = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
     let LnameRegex = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
     let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
@@ -105,7 +102,6 @@ function validateForm(event) {
     email.classList.remove("error");
     phonE.classList.remove("error");
 
-    // Hide previous error messages
     uName.nextElementSibling.classList.add("hidden");
     Lname.nextElementSibling.classList.add("hidden");
     email.nextElementSibling.classList.add("hidden");
@@ -113,7 +109,6 @@ function validateForm(event) {
 
     let isValid = true;
 
-    // Validation for each field with feedback if invalid
     if (!uNameRegex.test(uName.value)) {
         isValid = false;
         uName.classList.add("error");
@@ -135,7 +130,6 @@ function validateForm(event) {
         phonE.nextElementSibling.classList.remove("hidden");
     }
 
-    // Determine selected contact method
 
     if (Phone.checked) {
         Contact= "Phone";
@@ -150,12 +144,12 @@ function validateForm(event) {
         contact.classList.remove("hidden");
         contact.innerHTML = "We will contact you via Text";
     } else {
-        // If no contact method is selected, mark the form as invalid
+
         isValid = false;
         contact.classList.remove("hidden");
         contact.innerHTML = "Please select a preferred contact method";
     }
-    
+
     if (isValid) {
         alert("Form submitted successfully!"); 
         document.getElementById("newAcct").submit();
@@ -170,5 +164,4 @@ function validateForm(event) {
         Text.checked = false;
     }
 }
-  // event listeners
   document.getElementById("newAcct").addEventListener("submit", validateForm);
