@@ -77,6 +77,7 @@ function clearCart() {
 //form messages
 function validateForm(event) {
     event.preventDefault(); 
+    console.log('in validation');
 
     let uName = document.getElementById("name");
     let Lname = document.getElementById("lname");
