@@ -76,93 +76,94 @@ function clearCart() {
 
 //form messages
 function validateForm(event) {
-    event.preventDefault(); 
-    console.log('in validation');
+    event.preventDefault(); // Prevent form submission
 
-    let uName = document.getElementById("name");
-    let Lname = document.getElementById("lname");
-    let email = document.getElementById("email");
-    let phonE = document.getElementById("phonenum");
-    let Phone = document.getElementById("Phone");
-    let Email = document.getElementById("Email");
-    let Text = document.getElementById("text");
+    // Get form elements
+    const uName = document.getElementById("name");
+    const Lname = document.getElementById("lname");
+    const email = document.getElementById("email");
+    const phonE = document.getElementById("phonenum");
+    const Phone = document.getElementById("Phone");
+    const Email = document.getElementById("Email");
+    const Text = document.getElementById("text");
 
+    // Error messages
+    const nameError = document.getElementById("name-error");
+    const lnameError = document.getElementById("lname-error");
+    const emailError = document.getElementById("email-error");
+    const phoneError = document.getElementById("phonenum-error");
+    const contactError = document.getElementById("contact-error");
+    const contactMessage = document.getElementById("contact");
 
-    let contact = document.getElementById("contact");
+    // Regex patterns
+    const nameRegex = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
+    const phoneRegex = /^(1[ -]?)?\d{3}[ -]?\d{3}[ -]?\d{4}$/;
 
-    contact.classList.add("hidden");
-    contact.innerHTML = "";
-
-    let uNameRegex = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
-    let LnameRegex = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
-    let emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,5}$/;
-    let phonERegex = /^(1[ -]?)?\d{3}[ -]?\d{3}[ -]?\d{4}$/;
-
+    // Reset error states
+    let isValid = true;
+    nameError.classList.add("hidden");
+    lnameError.classList.add("hidden");
+    emailError.classList.add("hidden");
+    phoneError.classList.add("hidden");
+    contactError.classList.add("hidden");
+    contactMessage.classList.add("hidden");
     uName.classList.remove("error");
     Lname.classList.remove("error");
     email.classList.remove("error");
     phonE.classList.remove("error");
 
-    uName.nextElementSibling.classList.add("hidden");
-    Lname.nextElementSibling.classList.add("hidden");
-    email.nextElementSibling.classList.add("hidden");
-    phonE.nextElementSibling.classList.add("hidden");
-
-    let isValid = true;
-
-    if (!uNameRegex.test(uName.value)) {
+    // Validation in each field
+    if (!nameRegex.test(uName.value)) {
         isValid = false;
         uName.classList.add("error");
-        uName.nextElementSibling.classList.remove("hidden");
+        nameError.classList.remove("hidden");
     }
-    if (!LnameRegex.test(Lname.value)) {
+
+    if (!nameRegex.test(Lname.value)) {
         isValid = false;
         Lname.classList.add("error");
-        Lname.nextElementSibling.classList.remove("hidden");
+        lnameError.classList.remove("hidden");
     }
+
     if (!emailRegex.test(email.value)) {
         isValid = false;
         email.classList.add("error");
-        email.nextElementSibling.classList.remove("hidden");
+        emailError.classList.remove("hidden");
     }
-    if (!phonERegex.test(phonE.value)) {
+
+    if (!phoneRegex.test(phonE.value)) {
         isValid = false;
         phonE.classList.add("error");
-        phonE.nextElementSibling.classList.remove("hidden");
+        phoneError.classList.remove("hidden");
     }
 
-
+    // Validate contact method selection
     if (Phone.checked) {
-        Contact= "Phone";
-        contact.classList.remove("hidden");
-        contact.innerHTML = "We will contact you via Phone";
+        contactMessage.classList.remove("hidden");
+        contactMessage.style.color = "green";
+        contactMessage.innerHTML = "We will contact you via Phone";
     } else if (Email.checked) {
-        Contact = "Email";
-        contact.classList.remove("hidden");
-        contact.innerHTML = "We will contact you via Email";
+        contactMessage.classList.remove("hidden");
+        contactMessage.style.color = "green";
+        contactMessage.innerHTML = "We will contact you via Email";
     } else if (Text.checked) {
-        Contact= "Text";
-        contact.classList.remove("hidden");
-        contact.innerHTML = "We will contact you via Text";
+        contactMessage.classList.remove("hidden");
+        contactMessage.style.color = "green";
+        contactMessage.innerHTML = "We will contact you via Text";
     } else {
-
         isValid = false;
-        contact.classList.remove("hidden");
-        contact.innerHTML = "Please select a preferred contact method";
+        contactError.classList.remove("hidden");
+        contactError.innerHTML = "Please select a preferred contact method";
     }
 
-    if (isValid) {
-        alert("Form submitted successfully!"); 
+    // Final check
+    /**if (isValid) {
+        alert("Form submitted successfully!");
         document.getElementById("newAcct").submit();
-
-        
-        uName.value = "";
-        Lname.value = "";
-        email.value = "";
-        phonE.value = "";
-        Phone.checked = false;
-        Email.checked = false;
-        Text.checked = false;
-    }
+    }*/
 }
-  document.getElementById("newAcct").addEventListener("submit", validateForm);
+
+
+// Attach event listener to the form
+document.getElementById("newAcct").addEventListener("submit", validateForm);

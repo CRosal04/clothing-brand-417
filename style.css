@@ -300,11 +300,15 @@ padding: 10px 8px;
 
 #cOllections h2{
 margin:20px;
+
 }
 .product-display {
   margin-top: 20px;
   padding: 20px;
   border-radius: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
 }
 .text-floatr{
   float: right;
@@ -360,17 +364,25 @@ margin:20px;
 }
 .required {
     color: red; }
-    
+
 #contact-us form{
       max-width: 800px;
       margin: auto;
       text-align: center;
-  }
-  .hidden {
-    visibility: hidden;
-    height: 1.5rem;
-    margin: 0.2rem 0 0 0;
 }
+.error-message {
+  color: red;
+  font-size: 0.9em;
+  display: none; 
+}
+.hidden {
+  display: none;
+}
+.error {
+  border: 1px solid red;
+}
+
+
   #names input,#nums input{
     border: 1px solid green;
     display: inline-block;
