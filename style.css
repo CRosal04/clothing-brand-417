@@ -169,7 +169,7 @@ h3{
     overflow: hidden;
 }
 header{
-    background-image: linear-gradient(green, #FFFFFF);
+    background-image: linear-gradient(#96B851, #FFFFFF);
 }
 
 
@@ -214,7 +214,7 @@ background-color:#F6D64A ;
 padding: 10px 8px;
 }
 #aBout{
-	background-color:#c29470;
+	background-color:#96B851;
   padding: 50px;
   
  }
@@ -373,13 +373,16 @@ margin:20px;
 .error-message {
   color: red;
   font-size: 0.9em;
-  display: none; 
 }
 .hidden {
   display: none;
+  padding-top:40px;
 }
-.error {
+#names .error {
   border: 1px solid red;
+  display:block;
+  margin: auto;
+  padding-top:40px;
 }
 
 
