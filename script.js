@@ -157,6 +157,15 @@ function validateForm(event) {
         contactError.innerHTML = "Please select a preferred contact method";
     }
 
+      // Reset form fields
+      uName.value = "";
+      Lname.value = "";
+      email.value = "";
+      phonE.value = "";
+      message.value = "";
+      Phone.checked = false;
+      Email.checked = false;
+      Text.checked = false;
     // Final check
    if (isValid) {
         alert("Form submitted successfully!");
