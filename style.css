@@ -124,6 +124,7 @@ body.dark-mode {
 .dark-mode #product{
 background-color: black;
 }
+
 .dark-mode fieldset{
   flex: 1;
   min-width: 250px; 
@@ -136,14 +137,19 @@ background-color: black;
   border: 2px solid #FF00FF;
   border-radius: 5px;
   background-color:  #CBC3E3;
+  
  }
+ 
  .dark-mode footer{
   background-color: #006660;
   border: 1px solid #FFFFFF;
  }
  .dark-mode li:hover{
-  background-color:#CBC3E3 ;
+  background-color:#CBC3E3;
   padding: 10px 8px;
+  }
+  .dark-mode #checkout-btn:hover, .dark-mode #product-bttns:hover{
+    background-color:#CBC3E3;
   }
 /*body*/
 h1{
