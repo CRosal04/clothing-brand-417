@@ -46,7 +46,12 @@ footer, header, hgroup, menu, nav, section {
   --text-color: black;
 }
 
-
+h1{
+  text-align: center;
+  font-weight: bold;
+  margin: 4px;
+  padding-top: 40px;
+}
 
 body {
 	line-height: 1;
@@ -79,26 +84,32 @@ body.dark-mode {
   --text-color: #f0f0f0;
 }
 .dark-mode header{
-  background-image: linear-gradient(#FF00FF, #FFFFFF); /* Dark mode: Magenta */
+  background-image: linear-gradient(#006660, #eb603e);
 }
 
 .dark-mode #aBout {
-  background-color: #00B2A9;
+  background-color: #006660;
+  border: 1px solid #FFFFFF;
 }
 .dark-mode #sHOP {
-  background-color: #FFA500; 
+  background-color: #00B2A9;
+  border: 1px solid #FFFFFF;
+   
 }
 .dark-mode #sHop p{
   color:#D3D3D3;
 }
 .dark-mode #cart{
-  background-color: #6A0DAD;
+  background-color: #00B2A9;
+  border: 1px solid #FFFFFF;
+ 
 }
 .dark-mode #cOllections{
-  background-color: #6A0DAD;
+  background-color:#006660;
 }
 .dark-mode #Contact-us{
-  background-color: #FFA500;
+  background-color: #006660;
+  border: 1px solid #FFFFFF;
 }
 .dark-mode #checkout-btn, .dark-mode #mySubmit, .dark-mode .toggle-btn{
   background-color: black;
@@ -126,6 +137,14 @@ background-color: black;
   border-radius: 5px;
   background-color:  #CBC3E3;
  }
+ .dark-mode footer{
+  background-color: #006660;
+  border: 1px solid #FFFFFF;
+ }
+ .dark-mode li:hover{
+  background-color:#CBC3E3 ;
+  padding: 10px 8px;
+  }
 /*body*/
 h1{
 	font-family: "Nunito", sans-serif;
@@ -214,7 +233,9 @@ background-color:#F6D64A ;
 padding: 10px 8px;
 }
 #aBout{
-	background-color:#96B851;
+	background-color:#FFFFFF;
+  border: 2px solid  #96B851;;
+
   padding: 50px;
   
  }
@@ -236,7 +257,7 @@ padding: 10px 8px;
 #sHop{
   margin: 0 auto ;
   background-color: #80b9c8;
-  
+  border: 2px solid #FFFFFF
 }
 #sHop h2,#sHop h3{
   padding: 10px;
@@ -268,7 +289,8 @@ padding: 10px 8px;
   margin-top: 30px;
   padding: 20px;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 2px solid  #96B851;
+
   border-radius: 5px;
 }
 .cart-details {
@@ -294,8 +316,8 @@ padding: 10px 8px;
 
 /*collection*/
 #cOllections{
-  background-color: #fff;
-  border: 1px solid #ddd;
+  background-color: #80b9c8;
+  border: 2px solid #FFFFFF;
 }
 
 #cOllections h2{
@@ -326,7 +348,9 @@ margin:20px;
 }
 .product-display p {
   font-size: 1.1em;
-  color: #666;
+  color: #FFFFFF;
+  margin: 10px;
+  padding-top: 50px; 
 }
 .product-buttons {
   margin-top: 20px;
@@ -348,7 +372,7 @@ margin:20px;
 /*Form*/
 #contact-us{
   background-color: #fff;
-  border: 1px solid green;
+  border: 2px solid #96B851;
   display: flex;
   gap: 20px; 
   justify-content: space-between; 
@@ -373,16 +397,17 @@ margin:20px;
 .error-message {
   color: red;
   font-size: 0.9em;
+  padding:4px;
 }
 .hidden {
   display: none;
-  padding-top:40px;
+  
 }
 #names .error {
   border: 1px solid red;
   display:block;
   margin: auto;
-  padding-top:40px;
+ 
 }
 
 
@@ -390,7 +415,8 @@ margin:20px;
     border: 1px solid green;
     display: inline-block;
     margin:5px;
-    padding: 10px;
+    padding: 12px;
+    padding-left: 14px;
     background-color: #ddd;
   }
   fieldset{
@@ -399,11 +425,11 @@ margin:20px;
   gap: 5pt;
   flex: 1;
   min-width: 250px; 
-  padding: 10px;
+  padding: 12px;
   border: 2px solid green;
   border-radius: 5px;
   background-color: #f4f4f4;
-  margin: 10px;;
+  margin: 12px;;
  }   
  
 #nums label ,#names label{
@@ -439,5 +465,5 @@ input[type="submit"]:hover {
 }
 footer{
   text-align: center;
-  background-color: #45a049;
+    background-color: #96B851;
 }

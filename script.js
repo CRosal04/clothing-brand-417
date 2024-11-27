@@ -158,10 +158,10 @@ function validateForm(event) {
     }
 
     // Final check
-   /* if (isValid) {
+   if (isValid) {
         alert("Form submitted successfully!");
         document.getElementById("newAcct").submit();
-    }*/
+    }
 }
 
 
